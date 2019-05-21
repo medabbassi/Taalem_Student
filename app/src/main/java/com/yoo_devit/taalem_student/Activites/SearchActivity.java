@@ -9,13 +9,19 @@ import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.yoo_devit.taalem_student.R;
 
-public class SearchActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class SearchActivity extends AppCompatActivity {
+    ListView listView;
+    ArrayList<String> list;
+    ArrayAdapter<String > adapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -42,6 +48,8 @@ public class SearchActivity extends AppCompatActivity {
             return false;
         }
     };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +61,23 @@ public class SearchActivity extends AppCompatActivity {
         MenuItem menuItem =menu.getItem(1);
         menuItem.setChecked(true);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        listView = (ListView) findViewById(R.id.listView);
+
+        list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Pineapple");
+        list.add("Orange");
+        list.add("Lychee");
+        list.add("Gavava");
+        list.add("Peech");
+        list.add("Melon");
+        list.add("Watermelon");
+        list.add("Papaya");
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
+        listView.setAdapter(adapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
