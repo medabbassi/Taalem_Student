@@ -9,6 +9,7 @@ public class Constants {
     public  static final String URL_DATA = ROOT_URL +"ApiCourse.php";
     public static final String URL_COURSE = ROOT_URL+"ApiCourse.php";
     public static  final  String UPLOAD_URL=ROOT_URL +"upload.php";
+    public static final  String URL_RESET_PASSWORD=ROOT_URL+ "resetPassword.php";
 
 
 }

@@ -22,7 +22,13 @@
         <activity android:name=".Activites.AboutActivity" />
         <activity android:name=".EditPasswordActivity" />
         <activity android:name=".Activites.SignUpActivity" />
-        <activity android:name=".Activites.LoginActivity" />
+        <activity android:name=".Activites.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activites.LibraryActivity"
             android:label="@string/title_activity_library" />
@@ -42,11 +48,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activites.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

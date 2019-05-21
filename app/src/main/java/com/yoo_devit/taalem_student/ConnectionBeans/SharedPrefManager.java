@@ -14,6 +14,7 @@ public class SharedPrefManager {
     private static final String Key_USER_NAME="userfullname";
     //private static final  String KEY_USER_JOB="userjob";
     private static final String KEY_USER_ID = "userid";
+    private static final  String KEY_USER_PASSWORD="userpassword";
     //private  static final String KEY_USER_PHONE="phone";
     private static final  String KEY_USER_COURSE="coursename";
     private static final  String KEY_USER_NBCHCOURSE="nbchpter";
@@ -55,6 +56,15 @@ public class SharedPrefManager {
 
         return true;
     }
+            public boolean resetPassword(String password){
+
+                SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                        editor.putString(KEY_USER_PASSWORD,password);
+                        editor.apply();
+                        return true;
+            }
     public boolean courseSave(int id, String coursename,String coursenbchapter,String images,String file){
         SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
 

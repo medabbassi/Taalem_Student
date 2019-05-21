@@ -15,5 +15,7 @@ public class PasswordResetActivity extends AppCompatActivity {
     }
 
     public void Reset(View view) {
+
+
     }
 }
