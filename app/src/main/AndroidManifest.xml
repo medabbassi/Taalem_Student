@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yoo_devit.taalem_student">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="ACCESS_FINE_LOCATION " />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activites.PasswordResetActivity"></activity>
+        <activity android:name=".Activites.PasswordResetActivity">
+
+        </activity>
         <activity android:name=".CourseViewerActivity" />
         <activity android:name=".Activites.CourseActivity" />
         <activity android:name=".Activites.AboutActivity" />
