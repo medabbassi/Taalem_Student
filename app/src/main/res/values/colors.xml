@@ -5,5 +5,7 @@
     <color name="colorAccent">#4EDE61</color>
     <color name="contentBodyColor">#ffffff</color>
     <color name="metal_gray">#C0C0C0</color>
+    <color name="reg_bg">#4c5870</color>
+    <color name="btn_bg">#dd2a7b</color>
 
 </resources>
