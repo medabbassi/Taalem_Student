@@ -9,12 +9,12 @@ public class SharedPrefManager {
     private static Context mCtx;
 
     private static final String SHARED_PREF_NAME = "mysharedpref12";
-    private static final String KEY_USERNAME = "username";
+   // private static final String KEY_USERNAME = "username";
     private static final String KEY_USER_EMAIL = "useremail";
     private static final String Key_USER_NAME="userfullname";
-    private static final  String KEY_USER_JOB="userjob";
+    //private static final  String KEY_USER_JOB="userjob";
     private static final String KEY_USER_ID = "userid";
-    private  static final String KEY_USER_PHONE="phone";
+    //private  static final String KEY_USER_PHONE="phone";
     private static final  String KEY_USER_COURSE="coursename";
     private static final  String KEY_USER_NBCHCOURSE="nbchpter";
     private static final  String KEY_USER_COURSEDESC="description";
@@ -38,17 +38,17 @@ public class SharedPrefManager {
 
 
 
-    public boolean userLogin(int id, String username, String email,String fullname,String job, String phone){
+    public boolean userLogin(int id, String email,String fullname){
 
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         //editor.putInt(KEY_USER_ID, id);
         editor.putString(KEY_USER_EMAIL, email);
-        editor.putString(KEY_USERNAME, username);
+       // editor.putString(KEY_USERNAME, username);
         editor.putString(Key_USER_NAME,fullname);
-        editor.putString(KEY_USER_JOB,job);
-        editor.putString(KEY_USER_PHONE,phone);
+        //editor.putString(KEY_USER_JOB,job);
+        //editor.putString(KEY_USER_PHONE,phone);
 
 
         editor.apply();
@@ -63,7 +63,7 @@ public class SharedPrefManager {
 
     public boolean isLoggedIn(){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if(sharedPreferences.getString(KEY_USERNAME, null) != null){
+        if(sharedPreferences.getString(KEY_USER_EMAIL, null) != null){
             return true;
         }
         return false;
@@ -82,10 +82,10 @@ public class SharedPrefManager {
         return sharedPreferences.getString(KEY_USER_ID,null);
     }
 
-    public String getUsername(){
+   /* public String getUsername(){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(KEY_USERNAME, null);
-    }
+    }*/
 
     public String getUserEmail(){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -96,13 +96,13 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return  sharedPreferences.getString(Key_USER_NAME,null);
     }
-    public String getUserJob(){
+    /*public String getUserJob(){
         SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return  sharedPreferences.getString(KEY_USER_JOB,null);
-    }
-    public String getUserPhone(){
+    }*/
+    /*public String getUserPhone(){
         SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return  sharedPreferences.getString(KEY_USER_PHONE,null);
-    }
+    }*/
 
 }

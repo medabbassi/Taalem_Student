@@ -6,21 +6,14 @@ import android.view.View;
 
 import com.yoo_devit.taalem_student.R;
 
-public class CourseActivity extends AppCompatActivity {
+public class PasswordResetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course);
-
-
-
+        setContentView(R.layout.activity_password_reset);
     }
 
-    public void Open(View view) {
-    }
-
-    public void Download(View view) {
-
+    public void Reset(View view) {
     }
 }

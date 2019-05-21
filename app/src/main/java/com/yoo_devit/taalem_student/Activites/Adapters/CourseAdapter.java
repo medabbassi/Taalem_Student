@@ -1,4 +1,4 @@
-package com.yoo_devit.taalem_student;
+package com.yoo_devit.taalem_student.Activites.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yoo_devit.taalem_student.Beans.Course;
+import com.yoo_devit.taalem_student.R;
 
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             courseDesc=itemView.findViewById(R.id.textViewShortDesc);
             courseChap=itemView.findViewById(R.id.textViewRating);
             courseFee=itemView.findViewById(R.id.textViewRating);
-            imageView=itemView.findViewById(R.id.imageView);
+            //imageView=itemView.findViewById(R.id.imageView);
 
         }
 

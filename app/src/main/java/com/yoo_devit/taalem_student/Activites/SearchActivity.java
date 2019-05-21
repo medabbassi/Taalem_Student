@@ -62,7 +62,7 @@ public class SearchActivity extends AppCompatActivity {
         menuItem.setChecked(true);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        listView = (ListView) findViewById(R.id.recyclerView);
+        listView =  findViewById(R.id.recyclerView);
 
         list = new ArrayList<>();
         list.add("Apple");
