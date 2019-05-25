@@ -14,15 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activites.PasswordResetActivity">
-
-        </activity>
+        <activity android:name=".Activites.FilesActivity"></activity>
+        <activity android:name=".Activites.coursesActivity" />
+        <activity android:name=".Activites.PasswordResetActivity" />
         <activity android:name=".CourseViewerActivity" />
         <activity android:name=".Activites.CourseActivity" />
         <activity android:name=".Activites.AboutActivity" />
         <activity android:name=".EditPasswordActivity" />
         <activity android:name=".Activites.SignUpActivity" />
-        <activity android:name=".Activites.LoginActivity" >
+        <activity android:name=".Activites.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,8 +47,7 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activites.MainActivity">
-        </activity>
+        <activity android:name=".Activites.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

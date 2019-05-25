@@ -1,5 +1,6 @@
 package com.yoo_devit.taalem_student.Activites;
 
+import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
@@ -10,16 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TabHost;
+import android.widget.Toast;
 
 
 import com.yoo_devit.taalem_student.Activites.Adapters.PageAdapter;
 import com.yoo_devit.taalem_student.R;
 
-public class LibraryActivity extends AppCompatActivity {
+public class LibraryActivity extends  TabActivity {
 
-        private TabLayout tabLayout;
-        private  TabItem mycourse,myfiles;
-        private ViewPager viewPager;
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -52,12 +52,8 @@ public class LibraryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library2);
-        TabLayout tabLayout = findViewById(R.id.tablayout);
-        TabItem tabCourse=findViewById(R.id.course);
-        TabItem tabfile=findViewById(R.id.files);
-        ViewPager viewPager = findViewById(R.id.viewpager);
 
-        PageAdapter pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
         Menu menu =bottomNavigationView.getMenu();
@@ -65,8 +61,37 @@ public class LibraryActivity extends AppCompatActivity {
         menuItem.setChecked(true);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        viewPager.setAdapter(pageAdapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+
+        TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost); // initiate TabHost
+        TabHost.TabSpec spec; // Reusable TabSpec for each tab
+        Intent intent; // Reusable Intent for each tab
+
+        spec = tabHost.newTabSpec("My Courses"); // Create a new TabSpec using tab host
+        spec.setIndicator("My Courses"); // set the “HOME” as an indicator
+        // Create an Intent to launch an Activity for the tab (to be reused)
+        intent = new Intent(this, coursesActivity.class);
+        spec.setContent(intent);
+        tabHost.addTab(spec);
+
+        spec = tabHost.newTabSpec("My Files"); // Create a new TabSpec using tab host
+        spec.setIndicator("My Files"); // set the “CONTACT” as an indicator
+        // Create an Intent to launch an Activity for the tab (to be reused)
+        intent = new Intent(this, FilesActivity.class);
+        spec.setContent(intent);
+        tabHost.addTab(spec);
+
+        tabHost.setCurrentTab(1);
+        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+                // display the name of the tab whenever a tab is changed
+                Toast.makeText(getApplicationContext(), tabId, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
 
     }
 
