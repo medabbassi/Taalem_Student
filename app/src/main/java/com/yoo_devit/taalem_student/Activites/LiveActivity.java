@@ -52,4 +52,5 @@ public class LiveActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+
 }

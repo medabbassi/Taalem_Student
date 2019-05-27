@@ -96,4 +96,7 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(new Intent(this,LoginActivity.class));
 
     }
+
+    public void About(View view) {
+    }
 }

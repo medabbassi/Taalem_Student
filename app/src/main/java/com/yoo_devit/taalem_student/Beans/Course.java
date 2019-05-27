@@ -20,6 +20,11 @@ public class Course {
         Nbchapter = nbchapter;
         Sdesc = sdesc;
     }
+    public Course(String cname,String sdesc){
+        Cname = cname;
+        Sdesc = sdesc;
+
+    }
 
     public String getCname() {
         return Cname;

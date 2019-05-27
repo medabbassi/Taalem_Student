@@ -59,14 +59,17 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(1);
         menuItem.setChecked(true);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Toasty.success(SearchActivity.this,"Start search",Toasty.LENGTH_LONG,true).show();
+
+
+
+
 
     }
 }
