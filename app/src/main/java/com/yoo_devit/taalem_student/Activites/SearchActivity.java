@@ -21,9 +21,7 @@ import java.util.ArrayList;
 import es.dmoral.toasty.Toasty;
 
 public class SearchActivity extends AppCompatActivity {
-    ListView listView;
-    ArrayList<String> list;
-    ArrayAdapter<String> adapter;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
