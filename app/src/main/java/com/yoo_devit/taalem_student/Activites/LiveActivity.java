@@ -22,22 +22,19 @@ public class LiveActivity extends AppCompatActivity {
                 case R.id.navigation_explore:
                     Intent intent =new Intent(LiveActivity.this,MainActivity.class);
                     startActivity(intent);
-                    return true;
                 case R.id.navigation_search:
                     Intent intent1 =new Intent(LiveActivity.this,SearchActivity.class);
                     startActivity(intent1);
-                    return true;
-                case R.id.navigation_live:
-                    Intent intent4=new Intent (LiveActivity.this,LiveActivity.class);
-                    startActivity(intent4);
+
                 case R.id.navigation_library:
                     Intent intent2=new Intent(LiveActivity.this,LibraryActivity.class);
                     startActivity(intent2);
-                    return true;
                 case  R.id.navigation_profile:
                     Intent intent3=new Intent(LiveActivity.this,ProfileActivity.class);
                     startActivity(intent3);
-                    return true;
+                case R.id.navigation_live:
+                    Intent intent4=new Intent (LiveActivity.this,LiveActivity.class);
+                    startActivity(intent4);
             }
             return false;
         }

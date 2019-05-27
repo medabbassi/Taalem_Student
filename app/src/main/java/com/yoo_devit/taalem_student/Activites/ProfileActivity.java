@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yoo_devit.taalem_student.ConnectionBeans.SharedPrefManager;
+import com.yoo_devit.taalem_student.EditPasswordActivity;
 import com.yoo_devit.taalem_student.R;
 
 import es.dmoral.toasty.Toasty;
@@ -49,13 +50,13 @@ public class ProfileActivity extends AppCompatActivity {
         }
     };
 
-    private EditText Name,Email;
+    private TextView Name,Email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile2);
-        Toast.makeText(this, "work", Toast.LENGTH_SHORT).show();
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
         Menu menu =bottomNavigationView.getMenu();
@@ -65,6 +66,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         Name=findViewById(R.id.name);
         Email=findViewById(R.id.email);
+
+            Toasty.success(ProfileActivity.this,"Welcome",Toasty.LENGTH_LONG,true).show();
         if(!SharedPrefManager.getInstance(this).isLoggedIn()){
             finish();
             Toasty.error(ProfileActivity.this, "Error to connect.", Toast.LENGTH_SHORT, true).show();
@@ -82,11 +85,15 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void Edit(View view) {
+        Intent intent=new Intent(this, EditPasswordActivity.class);
+        startActivity(intent);
     }
 
-    public void AddPayment(View view) {
-    }
 
-    public void FacebookLogin(View view) {
+    public void Logout(View view) {
+        SharedPrefManager.getInstance(this).logout();
+        finish();
+        startActivity(new Intent(this,LoginActivity.class));
+
     }
 }
