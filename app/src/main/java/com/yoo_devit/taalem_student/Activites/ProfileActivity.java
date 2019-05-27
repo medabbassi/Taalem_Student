@@ -8,10 +8,14 @@ import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.yoo_devit.taalem_student.ConnectionBeans.SharedPrefManager;
 import com.yoo_devit.taalem_student.R;
+
+import es.dmoral.toasty.Toasty;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -44,6 +48,9 @@ public class ProfileActivity extends AppCompatActivity {
             return false;
         }
     };
+
+    private EditText Name,Email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +62,23 @@ public class ProfileActivity extends AppCompatActivity {
         MenuItem menuItem =menu.getItem(4);
         menuItem.setChecked(true);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Name=findViewById(R.id.name);
+        Email=findViewById(R.id.email);
+        if(!SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            Toasty.error(ProfileActivity.this, "Error to connect.", Toast.LENGTH_SHORT, true).show();
+            startActivity(new Intent(this, LoginActivity.class));
+            return;
+
+        }
+        Email.setText(SharedPrefManager.getInstance(this).getUserEmail());
+        Name.setText(SharedPrefManager.getInstance(this).getFullName());
+
+
+
+
+
     }
 
     public void Edit(View view) {
