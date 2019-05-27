@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent1 =new Intent(MainActivity.this,SearchActivity.class);
                     startActivity(intent1);
                     return true;
+                case R.id.navigation_live:
+                    Intent intent4=new Intent(MainActivity.this,LiveActivity.class);
+                    startActivity(intent4);
                 case R.id.navigation_library:
                     Intent intent2=new Intent(MainActivity.this,LibraryActivity.class);
                     startActivity(intent2);

@@ -14,8 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activites.FilesActivity"></activity>
-        <activity android:name=".Activites.coursesActivity" />
+        <activity
+            android:name=".Activites.LiveActivity"
+            android:label="@string/title_activity_live"></activity>
         <activity android:name=".Activites.PasswordResetActivity" />
         <activity android:name=".CourseViewerActivity" />
         <activity android:name=".Activites.CourseActivity" />

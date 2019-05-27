@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1032165618394",
+    "firebase_url": "https://pfe2019-a2bf8.firebaseio.com",
+    "project_id": "pfe2019-a2bf8",
+    "storage_bucket": "pfe2019-a2bf8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032165618394:android:2d8324645f5e8777",
+        "android_client_info": {
+          "package_name": "com.yoo_devit.taalem_student"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032165618394-b54nfr2893mvmvhst43np9qp167v7kq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH9HwXL1edhURqWMTHWK14nD47TwF2ink"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032165618394-b54nfr2893mvmvhst43np9qp167v7kq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,6 +10,12 @@
         android:id="@+id/navigation_search"
         android:icon="@drawable/ic_search_black_24dp"
         android:title= "@string/title_search" />
+    <item
+        android:id="@+id/navigation_live"
+        android:icon="@drawable/ic_live_tv_black_24dp"
+        android:title="Live"/>
+
+
 
     <item android:id="@+id/navigation_library"
         android:icon="@drawable/ic_view_list_black_24dp"
