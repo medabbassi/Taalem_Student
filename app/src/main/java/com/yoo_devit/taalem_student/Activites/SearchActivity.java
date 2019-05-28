@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -69,6 +70,8 @@ public class SearchActivity extends AppCompatActivity {
 
         searchView=findViewById(R.id.searchView);
         recyclerView=findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
 
@@ -77,6 +80,10 @@ public class SearchActivity extends AppCompatActivity {
 
 
     }
+
+            public void loadSearch(String s){
+
+            }
 
 
 }
