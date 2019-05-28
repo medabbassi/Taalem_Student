@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -52,7 +53,7 @@ public class SearchActivity extends AppCompatActivity {
         }
     };
         private  SearchView searchView;
-        private  ListView listView;
+       private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,8 @@ public class SearchActivity extends AppCompatActivity {
         Toasty.success(SearchActivity.this,"Start search",Toasty.LENGTH_LONG,true).show();
 
         searchView=findViewById(R.id.searchView);
-        listView=findViewById(R.id.listView);
+        recyclerView=findViewById(R.id.recyclerView);
+
 
 
 
