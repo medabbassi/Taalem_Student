@@ -51,7 +51,8 @@ public class SearchActivity extends AppCompatActivity {
             return false;
         }
     };
-
+        private  SearchView searchView;
+        private  ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,10 @@ public class SearchActivity extends AppCompatActivity {
         menuItem.setChecked(true);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Toasty.success(SearchActivity.this,"Start search",Toasty.LENGTH_LONG,true).show();
+
+        searchView=findViewById(R.id.searchView);
+        listView=findViewById(R.id.listView);
+
 
 
 
